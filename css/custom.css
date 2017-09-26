@@ -1,0 +1,171 @@
+
+body{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+	background-color:#38393a;
+	color:white;
+	text-align:center;
+    animation-name: colorize;
+    animation-delay: 5s;
+    animation-duration: 7s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in;
+}
+
+.row{
+    padding-top: 15%;
+}
+
+img{
+    height: 5%;
+    width: 5%;
+}
+
+img.popcolor{
+    animation-name: popcolors;
+    animation-delay: 5s;
+    animation-duration: 7s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+@keyframes popcolors{
+    from {filter:none;}
+    to {filter:none;}
+}
+
+img.popcolor_odd{
+    animation-name: popcolors_odd;
+    animation-delay: 5s;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in;
+}
+
+@keyframes popcolors_odd{
+    0% {filter:none;transform: scale(.9);}
+    50% {filter:none;transform: scale(1);}
+    100% {filter:none;transform: scale(.9);}
+}
+
+img.popcolor_even{
+    animation-name: popcolors_even;
+    animation-delay: 5s;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in;
+}
+
+@keyframes popcolors_even{
+    0% {filter:none;transform: scale(1.1);}
+    50% {filter:none;transform: scale(1);}
+    100% {filter:none;transform: scale(1.1);}
+}
+
+img.party_mask{
+    animation-name: party_masks;
+    animation-delay: 5s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes party_masks{
+    0%{filter:none; transform: scale(1);}
+    25%{filter:none;transform: scale(3) rotate(-30deg) translate(7px);}
+    50%{filter:none;transform: scale(1);}
+    75%{filter:none;transform: scale(7) rotate(-15deg) translateX(14px);}
+    100%{filter:none;transform: scale(1);}
+}
+
+img.party_mask_2{
+    animation-name: party_masks_2;
+    animation-delay: 5s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes party_masks_2{
+    0%{filter:none; transform: scale(1);}
+    25%{filter:none;transform: scale(7) rotate(15deg) translateX(-14px);}
+    50%{filter:none;transform: scale(1);}
+    75%{filter:none;transform: scale(3) rotate(30deg) translateX(-7px);}
+    100%{filter:none;transform: scale(1);}
+}
+
+img.animate{
+    animation-name: moveitmoveit;
+    animation-delay: 5s;
+    animation-duration: 7s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+@keyframes moveitmoveit{
+    0% {transform:rotate(0deg) scale(1); 
+    filter: none;}
+    50% {transform:rotate(180deg) scale(1.4); 
+    filter: none;}
+    100% {transform:rotate(360deg) scale(1); 
+    filter: none;}
+}
+
+@keyframes colorize{
+    0% {background-color:#007aff;}
+    25% {background-color:#ff3b30;}
+    50% {background-color:#ffcc00;}
+    75% {background-color:#4cd964;}
+    100% {background-color:#5856d6;}
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+
+h2 {
+    font-family: 'Gochi Hand', cursive;
+}
+
+.typedEffect {
+    display: inline-block;
+}
+
+.message {
+    position: relative;
+}
+
+.message > h1 {
+    margin: 0;
+    font-size: 100px;
+}
+
+.message > h2 {
+    font-size: 18px;
+}
+
+@media(max-width:767px) {
+    img{
+        height: 10%;
+        width: 10%;
+    }
+
+    .message {
+        padding-top: 0%;
+    }
+
+    .message > h1 {
+        font-size: 45px;
+    }	
+
+    h2{
+		font-size: 16px;
+	}
+
+    .break {
+        width: 95%;
+    }
+}
